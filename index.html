@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mujeres en Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <img src="images/ico-menu.svg" alt="Icono del Menú" />
+            </div>
+            <div class="brand">Mujeres en Tecnología</div>
+            <div class="date">01/02/2021</div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#main">Principal</a></li>
+                <li><a href="#rulez">Reglas</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="hero">
+        <h1>MUJERES EN TECNOLOGÍA</h1>
+        <p>En esta plataforma celebramos a las mujeres que están cambiando el mundo de la tecnología.</p>
+        <div class="down-arrow" onclick="scrollToSection('main')">
+            <img src="images/ico-scroll-down.svg" alt="Icono de Desplazamiento Hacia Abajo" />
+        </div>
+    </div>
+    <main>
+        <section id="main" class="frontend-tips">
+            <h2>Consejos de Front-end</h2>
+            <h3>Mejora tus habilidades de desarrollo</h3>
+            <p>Aprende los mejores trucos y técnicas para mejorar tu código y crear interfaces de usuario impresionantes.</p>
+            <button>Ir</button>
+        </section>
+        <section id="rulez" class="reasons">
+            <h2>3 Razones para seguir las Reglas</h2>
+            <div class="reason">
+                <h3>Mejora tu rendimiento</h3>
+                <p>Seguir reglas establecidas te ayuda a mantener un alto nivel de eficiencia y calidad en tu trabajo.</p>
+            </div>
+            <div class="reason">
+                <h3>Facilita la colaboración</h3>
+                <p>Cuando todos siguen las mismas reglas, trabajar en equipo se vuelve mucho más sencillo y efectivo.</p>
+            </div>
+            <div class="reason">
+                <h3>Desarrollo continuo</h3>
+                <p>Las reglas bien definidas fomentan una cultura de mejora continua y aprendizaje constante.</p>
+            </div>
+            <button>Más razones</button>
+        </section>
+    </main>
+    <footer id="contact">
+        <div class="footer-content">
+            <p>©2021 we ❤️ develop</p>
+            <div class="up-arrow" onclick="scrollToSection('top')">
+                <img src="images/ico-arrow.svg" alt="Icono de Flecha Hacia Arriba" />
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('show');
+        }
+
+        function scrollToSection(sectionId) {
+            if(sectionId === 'top') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                var section = document.getElementById(sectionId);
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
